@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font-weight: normal;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciandos estudos com <strong>DOM</strong></h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaSrip</p>
+    <div id="msg">clique em mim</div>
+    <div name="msg2">clique em mim</div>
+    <div class="msg3">clique em mim</div>
+    <div id="msg4">clique em mim</div>
+
+
+    <script>
+        // window.document.write('Olá, mundo!!!')
+        // window.document.write(window.document.charset)
+        // window.document.write(window.navigator.appName)
+        // window.document.write(window.document.URL)
+
+        /* Selecionando os elementos pela TAG */
+        // var corpo = window.document.body                             // cria uma variável para trabalhar ou estilizar o fundo da tela 'body'
+        // corpo.style.background = 'black'                             // altera a cor do fundo
+        // var p1 = window.document.getElementsByTagName('p')[1]        // cria uma variável pra trabalhar com as TAGs 'p', entre os colchetes é selicionado a sequencia [0, 1, 3, ...]
+        // window.document.write('está escrito assim: ' + p1.innerText) // inclui uma linha onde mostramos o texto selecionado na tela
+        // p1.style.color = 'blue'                                      // altera a cor do texto
+
+        // window.alert(p1.innerHTML)  // esta exibição mostra na caixa de texto as TAGs, melhor utilizar 'innerText'
+        // window.alert(p1.innerText)
+
+
+        /* Selecionando os elementos por ID */
+        var d = window.document.getElementById('msg')
+        // d.style.background = 'greem'
+        d.innerText = 'Estou aguardando... 1ª <div>'
+        // window.document.getElementById('msg').innerText = 'Hello, World!!!'
+
+
+        /* Selecionando os elementos por Nome */
+        var d1 = window.document.getElementsByName('msg2')[0]
+        // d.style.background = 'greem'
+        d1.innerText = 'Estou aguardando... 2ª <div>'
+        // window.document.getElementById('msg').innerText = 'Hello, World!!!'
+
+
+        /* Selecionando os elementos por Classe */
+        var d2 = window.document.getElementsByClassName('msg3')[0]
+        // d.style.background = 'greem'
+        d2.innerText = 'Estou aguardando... 3ª <div>'
+        // window.document.getElementById('msg').innerText = 'Hello, World!!!'
+
+
+        /* Selecionando os elementos por Selector */
+        var d3 = window.document.querySelector('div#msg4') // `#` -> para ID, `.` -> [ara class]
+        // d.style.background = 'greem'
+        d3.innerText = 'Estou aguardando... 4ª <div>'
+        // window.document.getElementById('msg').innerText = 'Hello, World!!!'
+
+    </script>
+
+</body>
+</html>

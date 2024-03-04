@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro código...</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: green;
+        }
+
+        h1{
+            color: rgb(26, 99, 99);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!!!</h1>
+    <p>Meu primeiro código!!!</p>
+
+    <script>
+        // é possível também somente o 'Number' e dexar que o JS decida se é interio ou real.
+        var n1 = Number.parseFloat(window.prompt('Digite um número:'));
+        var n2 = Number.parseFloat(window.prompt('Digite outro número:'));
+        var soma = n1 + n2
+        window.alert('A soma entre ' + n1 + ' e ' + n2 + ' é igual a ' + soma + '.')
+
+        // Template String
+        // placeHolder
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}.`)
+
+        /* Caso seja necessário converter números para string, pode ser utilizado 'String(n)' ou 'n.String()' onde 'n' é a variável. */
+
+        /*
+        var s = 'JavaScript'
+
+        s.length        // quantos caracteres tem a string.
+        s.toUpperCase() // tudo para maiúsculas.
+        s.toLowerCase() // tudo para minúsculas.
+        */
+    </script>
+</body>
+</html>
