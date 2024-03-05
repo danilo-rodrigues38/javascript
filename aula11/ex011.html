@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nascionalidade</title>
+    <script src="ex009.js"></script>
+</head>
+<body>
+    <h1>Determinando a nascionalidade</h1>
+    <p>Qual país você nasceu?</p>
+    <input type="text" name="txtnasc" id="txtnasc">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id="res"></div>
+
+    <script>
+        function checar() {
+            var pais = String(window.document.getElementById('txtnasc').value).toLowerCase()
+            var res = window.document.getElementById('res')
+
+            if (pais == 'brasil') {
+                res.innerHTML = `<p>Você nasceu no ${pais.toUpperCase()}, então é Brasileiro.</p>`
+            } else {
+                res.innerHTML = `<p>Você nasceu no(a) ${pais.toUpperCase()}, então você é Estrangeiro.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
